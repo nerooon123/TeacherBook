@@ -16,8 +16,9 @@
         <WrapPanel Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center">
             <TextBlock Text="Выберите группу: " Width="150"/>
             <ComboBox x:Name="GroupName" Width="150" SelectionChanged="GroupName_SelectionChanged"/>
-            <Button Content="Вывод отчета" Width="150"/>
+            <Button x:Name="SaveExcel" Content="Вывод отчета" Width="150" Click="SaveExcel_Click"/>
         </WrapPanel>
         <DataGrid x:Name="GroupData" Grid.Row="1"/>
+
     </Grid>
 </Page>
