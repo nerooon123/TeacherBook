@@ -11,9 +11,8 @@
             <RowDefinition Height="90"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <WrapPanel Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <TextBlock Text="Выберите группу"/>
-            <ComboBox x:Name="GroupName" Width="100"/>
-        </WrapPanel>
+        <Image Source="/Assets/Images/wsr-300.png" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <TextBlock Text="HELLO" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="60"/>
+        <Frame x:Name="MainFrame" Grid.Row="1"/>
     </Grid>
 </Window>

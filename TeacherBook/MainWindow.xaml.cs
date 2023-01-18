@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using TeacherBook.View.Pages;
 
 namespace TeacherBook
 {
@@ -23,6 +24,7 @@ namespace TeacherBook
         public MainWindow()
         {
             InitializeComponent();
+            MainFrame.NavigationService.Navigate(new GroupPage());
         }
     }
 }
