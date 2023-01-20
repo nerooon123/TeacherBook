@@ -29,7 +29,7 @@ namespace TeacherBook.View.Pages
 
         private void RegButton_Click(object sender, RoutedEventArgs e)
         {
-
+            // reg
         }
 
         private void Role_SelectionChanged(object sender, SelectionChangedEventArgs e)
