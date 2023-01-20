@@ -24,7 +24,7 @@ namespace TeacherBook
         public MainWindow()
         {
             InitializeComponent();
-            MainFrame.NavigationService.Navigate(new GroupPage());
+            MainFrame.NavigationService.Navigate(new SigInPage());
         }
     }
 }
