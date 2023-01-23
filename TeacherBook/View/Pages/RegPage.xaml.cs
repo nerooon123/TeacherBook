@@ -29,14 +29,36 @@ namespace TeacherBook.View.Pages
 
         private void RegButton_Click(object sender, RoutedEventArgs e)
         {
-            // reg
-        }
-
-        private void Role_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            Role.ItemsSource = db.context.Role.ToList();
-
-            Role.DisplayMemberPath = "NameRole";
+            if (LoginTextBox.Text.Length > 0) // проверяем введён ли логин     
+            {
+                if (Password.Text.Length > 0) // проверяем введён ли пароль         
+                {
+                    if (db.context.Users.Count(x => x.Login == LoginTextBox.Text) > 0)
+                    {
+                        MessageBox.Show("Пользователь с таким логином уже существует!", "Увидомление", MessageBoxButton.OK, MessageBoxImage.Information);
+                        return;
+                    }
+                    try
+                    {
+                        Users userObj = new Users()
+                        {
+                            Login = LoginTextBox.Text,
+                            Password = Password.Text,
+                            IdRole = 1
+                        };
+                        db.context.Users.Add(userObj);
+                        db.context.SaveChanges();
+                        MessageBox.Show("Данные успешно добавлениы!", "Увидомление", MessageBoxButton.OK, MessageBoxImage.Information);
+                        this.NavigationService.Navigate(new SigInPage());
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Ошибка при добавление данных!", "Увидомление", MessageBoxButton.OK, MessageBoxImage.Error);
+                    }
+                }
+                else MessageBox.Show("Введите пароль"); // выводим ошибку    
+            }
+            else MessageBox.Show("Введите логин"); // выводим ошибку
         }
     }
 }
