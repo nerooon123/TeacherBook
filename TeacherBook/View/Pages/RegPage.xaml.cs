@@ -45,6 +45,7 @@ namespace TeacherBook.View.Pages
                             Login = LoginTextBox.Text,
                             Password = Password.Text,
                             IdRole = 1
+                            // ...
                         };
                         db.context.Users.Add(userObj);
                         db.context.SaveChanges();
