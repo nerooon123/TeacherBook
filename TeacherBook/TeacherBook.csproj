@@ -131,6 +131,9 @@
     <Compile Include="View\Pages\GroupPage.xaml.cs">
       <DependentUpon>GroupPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Pages\MenuPage.xaml.cs">
+      <DependentUpon>MenuPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Pages\RegPage.xaml.cs">
       <DependentUpon>RegPage.xaml</DependentUpon>
     </Compile>
@@ -150,6 +153,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="View\Pages\GroupPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Pages\MenuPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
