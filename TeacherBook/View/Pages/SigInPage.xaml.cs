@@ -40,7 +40,6 @@ namespace TeacherBook.View.Pages
                 .Where(x => x.Login == LogInTextBox.Text && x.Password == AuthPasswordBox.Password).FirstOrDefault();
                 if (activeUser != null)
                 {
-                    
                     this.NavigationService.Navigate(new GroupPage());
                 }
                 else

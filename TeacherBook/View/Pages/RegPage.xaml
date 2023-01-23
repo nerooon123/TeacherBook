@@ -13,7 +13,7 @@
             <Border >
             <UniformGrid>
                 <TextBlock Text="Логин:" Width="200"/>
-                <TextBox x:Name="LoginTextBox"/>
+                <TextBox x:Name="Login"/>
             </UniformGrid>
             </Border>
             <UniformGrid>
@@ -22,6 +22,10 @@
                 <TextBox x:Name="Password"/>
             </UniformGrid>
             
+            <UniformGrid >
+                <TextBlock Text="Роль:" Width="200"/>
+                <ComboBox x:Name="Role" SelectionChanged="Role_SelectionChanged"/>
+            </UniformGrid>
             <Button x:Name="RegButton" Content="Зарегистрироваться" Click="RegButton_Click"/>
             
         </StackPanel>
