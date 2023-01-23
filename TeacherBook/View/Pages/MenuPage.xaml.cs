@@ -24,5 +24,15 @@ namespace TeacherBook.View.Pages
         {
             InitializeComponent();
         }
+
+        private void ListStudent_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new GroupPage());
+        }
+
+        private void AddStudent_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new AddStudentPage());
+        }
     }
 }

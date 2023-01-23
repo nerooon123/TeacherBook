@@ -13,6 +13,7 @@
         </Grid.RowDefinitions>
         <Image Source="/Assets/Images/wsr-300.png" HorizontalAlignment="Left" VerticalAlignment="Center"/>
         <TextBlock Text="HELLO" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="60"/>
-        <Frame x:Name="MainFrame" Grid.Row="1"/>
+        <Button x:Name="CanGoBack" Content="Назад" HorizontalAlignment="Right" VerticalAlignment="Center" Padding="20" Click="CanGoBack_Click"/>
+        <Frame x:Name="MainFrame" Grid.Row="1" NavigationUIVisibility="Hidden"/>
     </Grid>
 </Window>

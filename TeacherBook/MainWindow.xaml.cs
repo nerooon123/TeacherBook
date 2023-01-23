@@ -26,5 +26,13 @@ namespace TeacherBook
             InitializeComponent();
             MainFrame.NavigationService.Navigate(new SigInPage());
         }
+
+        private void CanGoBack_Click(object sender, RoutedEventArgs e)
+        {
+            if (MainFrame.CanGoBack)
+            {
+                MainFrame.GoBack();
+            }
+        }
     }
 }

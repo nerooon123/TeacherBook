@@ -7,14 +7,14 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="MenuPage">
-
+        
     <Grid>
-        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Background="Aqua">
-            <Button x:Name="AddStudent" Content="Добавить студента"/>
-            <Button x:Name="AddEstimation" Content="Добавить оценку"/>
-            <Button x:Name="ListStudent" Content="Список студентов"/>
-            <Button x:Name="ConstructEstimation" Content="Редактировать оценки"/>
-            <Button x:Name="DellStudent" Content="Удалить студента"/>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button x:Name="AddStudent" Content="Добавить студента" Width="200" Height="40" Margin="1,10,1,10" Background="Yellow" Click="AddStudent_Click"/>
+            <Button x:Name="AddEstimation" Content="Добавить оценку" Width="200" Height="40" Margin="1,1,1,10" Background="Yellow"/>
+            <Button x:Name="ListStudent" Content="Список студентов" Width="200" Height="40" Margin="1,1,1,10" Background="Yellow" Click="ListStudent_Click"/>
+            <Button x:Name="ConstructEstimation" Content="Редактировать оценки" Width="200" Height="40" Margin="1,1,1,10" Background="Yellow"/>
+            <Button x:Name="DellStudent" Content="Удалить студента" Width="200" Height="40" Margin="1,1,1,10" Background="Yellow"/>
         </StackPanel>
     </Grid>
 </Page>
