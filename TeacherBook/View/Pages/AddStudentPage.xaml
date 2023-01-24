@@ -26,12 +26,12 @@
             <ComboBox x:Name="YearAddComboBox"/>
 
             <TextBlock Text="Форма обучения: " Width="200"/>
-            <ComboBox x:Name="FromTimeComboBox"/>
+            <ComboBox x:Name="FormTimeComboBox"/>
 
             <TextBlock Text="Название группы: " Width="200"/>
             <ComboBox x:Name="NamGroupComboBox"/>
 
-            <Button Content="Сохранить" Click="Button_Click"/>
+            <Button Content="Сохранить" Click="SaveButton_Click"/>
         </UniformGrid>
     </Grid>
 </Page>

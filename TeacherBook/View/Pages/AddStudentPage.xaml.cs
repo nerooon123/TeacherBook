@@ -25,6 +25,17 @@ namespace TeacherBook.View.Pages
         public AddStudentPage()
         {
             InitializeComponent();
+            ProfessionComboBox.ItemsSource = db.context.Professions.ToList();
+            ProfessionComboBox.DisplayMemberPath = "NameProfession";
+
+            YearAddComboBox.ItemsSource = db.context.YearAdd.ToList();
+            YearAddComboBox.DisplayMemberPath = "Year";
+
+            FormTimeComboBox.ItemsSource = db.context.FormTime.ToList();
+            FormTimeComboBox.DisplayMemberPath = "Name";
+
+            NamGroupComboBox.ItemsSource = db.context.Groups.ToList();
+            NamGroupComboBox.DisplayMemberPath = "NameGroup";
         }
 
         private void SaveButton_Click(object sender, RoutedEventArgs e)
@@ -36,16 +47,16 @@ namespace TeacherBook.View.Pages
                     FiestName = FirstNameTextBox.Text,
                     LastName = LastNameTextBox.Text,
                     PatronomicName = PatronomicTextBox.Text,
-                    IdProfession = ProfessionComboBox.SelectedIndex,
-                    IdFormTime = FromTimeComboBox.SelectedIndex,
-                    IdYearAdd = YearAddComboBox.SelectedIndex,
-                    IdGroup = NamGroupComboBox.SelectedIndex
+                    IdProfession = 1 + ProfessionComboBox.SelectedIndex,
+                    IdFormTime = 1 + FormTimeComboBox.SelectedIndex,
+                    IdYearAdd = 1 + YearAddComboBox.SelectedIndex,
+                    IdGroup = 1 + NamGroupComboBox.SelectedIndex
 
                 };
                 db.context.Students.Add(studObj);
                 db.context.SaveChanges();
                 MessageBox.Show("Данные успешно добавлениы!", "Увидомление", MessageBoxButton.OK, MessageBoxImage.Information);
-                this.NavigationService.Navigate(new SigInPage());
+                this.NavigationService.Navigate(new MenuPage());
             }
             catch
             {
