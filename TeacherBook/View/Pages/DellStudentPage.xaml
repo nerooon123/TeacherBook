@@ -1,0 +1,30 @@
+﻿<Page x:Class="TeacherBook.View.Pages.DellStudentPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TeacherBook.View.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="DellStudentPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <WrapPanel Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock Text="Выбрать группу: "/>
+            <ComboBox x:Name="GroupNameComboBox" Width="200" SelectionChanged="GroupNameComboBox_SelectionChanged"/>
+        </WrapPanel>
+        <DataGrid x:Name="GroupDataGrid" Grid.Row="1" Grid.RowSpan="2" AutoGenerateColumns="False" ColumnWidth="*">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Студент" Binding="{Binding FiestName}"/>
+                <DataGridTextColumn Header="Группа" Binding="{Binding Groups.NameGroup}"/>
+                <DataGridTextColumn Header="Специальность" Binding="{Binding Professions.NameProfession}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="DeleteButton" Content="Удалить" Grid.Row="2" Click="DeleteButton_Click"/>
+    </Grid>
+</Page>
