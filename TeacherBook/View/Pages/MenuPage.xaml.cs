@@ -44,5 +44,10 @@ namespace TeacherBook.View.Pages
         {
             this.NavigationService.Navigate(new DellStudentPage());
         }
+
+        private void ConstructEstimation_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new ConstructEstimationPage());
+        }
     }
 }

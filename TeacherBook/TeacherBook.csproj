@@ -134,6 +134,9 @@
     <Compile Include="View\Pages\AddStudentPage.xaml.cs">
       <DependentUpon>AddStudentPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Pages\ConstructEstimationPage.xaml.cs">
+      <DependentUpon>ConstructEstimationPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Pages\DellStudentPage.xaml.cs">
       <DependentUpon>DellStudentPage.xaml</DependentUpon>
     </Compile>
@@ -166,6 +169,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Pages\AddStudentPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Pages\ConstructEstimationPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
