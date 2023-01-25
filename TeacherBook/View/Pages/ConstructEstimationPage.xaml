@@ -18,7 +18,18 @@
             <TextBlock Text="Выбрать группу: "/>
             <ComboBox x:Name="GroupNameComboBox" Width="200" SelectionChanged="GroupNameComboBox_SelectionChanged"/>
         </WrapPanel>
-        <DataGrid x:Name="GroupDataGrid" Grid.Row="1" Grid.RowSpan="2" ColumnWidth="*"/>
-        <Button x:Name="DeleteButton" Content="Удалить" Grid.Row="2" Click="DeleteButton_Click" Grid.RowSpan="2"/>
+        <DataGrid x:Name="GroupDataGrid" Grid.Row="1" Grid.RowSpan="2" ColumnWidth="*" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Номер Журнала" Binding="{Binding IdJournal}"/>
+                <DataGridTextColumn Header="Студент" Binding="{Binding Students.FiestName}"/>
+                <DataGridTextColumn Header="Направление" Binding="{Binding Subjects.NameSubject}"/>
+                <DataGridTextColumn Header="Оценка" Binding="{Binding Evaluation}"/>
+                <DataGridTextColumn Header="Группа" Binding="{Binding Groups.NameGroup}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="SaveButton" Content="Сохранить" Grid.Row="2" Click="SaveButton_Click" Grid.RowSpan="2"/>
+        <Grid x:Name="MarkEditGrid" Visibility="Collapsed" >
+            
+        </Grid>
     </Grid>
 </Page>
