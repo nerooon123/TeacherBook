@@ -64,6 +64,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Classes\CorrectStringClass.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Model\Core.cs" />
     <Compile Include="Model\FormTime.cs">
       <DependentUpon>Model.tt</DependentUpon>

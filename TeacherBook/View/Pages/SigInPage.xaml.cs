@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using TeacherBook.Classes;
+using TeacherBook.Controllers;
 using TeacherBook.Model;
 
 namespace TeacherBook.View.Pages
@@ -23,6 +25,8 @@ namespace TeacherBook.View.Pages
     {
         Core db = new Core();
         List<Users> arrayClients;
+        UserController obj = new UserController();
+        CorrectStringClass classObj = new CorrectStringClass();
         public SigInPage()
         {
             InitializeComponent();
@@ -31,14 +35,11 @@ namespace TeacherBook.View.Pages
 
         private void SingInButton_Click(object sender, RoutedEventArgs e)
         {
-            if (LogInTextBox.Text != String.Empty
-                && AuthPasswordBox.Password != String.Empty
-                && !String.IsNullOrWhiteSpace(LogInTextBox.Text)
-                && !String.IsNullOrWhiteSpace(AuthPasswordBox.Password))
+            if (classObj.StringOfEmpty(LogInTextBox.Text) && classObj.StringOfEmpty(AuthPasswordBox.Password))
             {
-                Users activeUser = arrayClients
-                .Where(x => x.Login == LogInTextBox.Text && x.Password == AuthPasswordBox.Password).FirstOrDefault();
-                if (activeUser != null)
+               
+
+                if (obj.Auth(LogInTextBox.Text, AuthPasswordBox.Password))
                 {
                     this.NavigationService.Navigate(new MenuPage());
                 }
